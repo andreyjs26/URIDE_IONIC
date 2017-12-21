@@ -1,0 +1,22 @@
+page-home {
+
+  .bg-image{
+    background-image: url('../assets/img/MainMenu.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+
+  .img-back{
+    background: transparent !important;
+  }
+
+  .middle-page{
+    height: 200px;
+  }
+
+  .top-page{
+    height: 30px;
+  }
+
+}
