@@ -13,50 +13,32 @@
 </ion-header>
 
 
-<ion-content padding>
-  <form>
-    <ion-item class="inputText">
-      <ion-input type="text" placeholder="Nombre" [(ngModel)]="conductor.name" name="name"></ion-input>
-    </ion-item>
-    <ion-item class="inputText">
-      <ion-input type="text" placeholder="Apellidos" [(ngModel)]="conductor.lname" name="lname"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label>Celular</ion-label>
-      <ion-input type="text" [(ngModel)]="conductor.phone" name="phone"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label>Desde</ion-label>
-      <ion-input type="text" [(ngModel)]="conductor.from" name="from"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label>Hacia</ion-label>
-      <ion-input type="text" [(ngModel)]="conductor.to" name="to"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label>EntradaT</ion-label>
-      <ion-input type="text" [(ngModel)]="conductor.entrance" name="entrance"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label>Salida</ion-label>
-      <ion-input type="text" [(ngModel)]="conductor.exit" name="exit"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label>Ida y VueltA</ion-label>
-      <ion-input type="text" [(ngModel)]="conductor.roundTrip" name="roundTrip"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label>Email</ion-label>
-      <ion-input type="text" [(ngModel)]="conductor.email" name="email"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label>Contraseña</ion-label>
-      <ion-input type="password" [(ngModel)]="conductor.password" name="password"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label>Vehículo</ion-label>
-      <ion-input type="password" [(ngModel)]="conductor.CarId" name="CarId"></ion-input>
-    </ion-item>
-    <button ion-button type="submit" block>Registrar</button>
-  </form>
+<ion-content class="login-content" padding>
+  <div class="login-box">
+
+    <form  #registerForm="ngForm">
+      <ion-row>
+        <ion-col>
+          <ion-list inset>
+
+            <ion-item>
+              <ion-input type="text" placeholder="Email" name="email"  required></ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-input type="password" placeholder="Password" name="password"  required></ion-input>
+            </ion-item>
+
+          </ion-list>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col class="signup-col">
+          <button ion-button class="submit-btn" full type="submit" [disabled]="!registerForm.form.valid">Register</button>
+        </ion-col>
+      </ion-row>
+
+    </form>
+  </div>
 </ion-content>
